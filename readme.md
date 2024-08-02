@@ -31,6 +31,7 @@ This Spark application processes healthcare data stored in CSV format on HDFS an
 ```
 ├───data
 │   ├───processed
+│   │       mongoDB_data.png
 │   └───raw
 │           health_data_20230801.csv
 │           health_data_20230802.csv
