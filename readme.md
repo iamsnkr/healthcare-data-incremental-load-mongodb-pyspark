@@ -19,6 +19,68 @@ This Spark application processes healthcare data stored in CSV format on HDFS an
     - Flags patients aged 60 years and older for special healthcare attention.
   - **Disease Trend Over Week:**
     - Analyzes the number of cases diagnosed for each disease across different days of the week to identify trends.
+  - **Console Output**
+  ```bash
+org.mongodb.spark#mongo-spark-connector_2.12 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-28c561bf-2c8b-4dc0-9048-cb7a5539beeb;1.0
+	confs: [default]
+	found org.mongodb.spark#mongo-spark-connector_2.12;3.0.1 in central
+	found org.mongodb#mongodb-driver-sync;4.0.5 in central
+	found org.mongodb#bson;4.0.5 in central
+	found org.mongodb#mongodb-driver-core;4.0.5 in central
+:: resolution report :: resolve 313ms :: artifacts dl 39ms
+	:: modules in use:
+	org.mongodb#bson;4.0.5 from central in [default]
+	org.mongodb#mongodb-driver-core;4.0.5 from central in [default]
+	org.mongodb#mongodb-driver-sync;4.0.5 from central in [default]
+	org.mongodb.spark#mongo-spark-connector_2.12;3.0.1 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   4   |   0   |   0   |   0   ||   4   |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-28c561bf-2c8b-4dc0-9048-cb7a5539beeb
+	confs: [default]
+	0 artifacts copied, 4 already retrieved (0kB/20ms)
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+Displaying first 5 rows of the raw data DataFrame:
++----------+---+------+--------------+---------------------+--------------+
+|patient_id|age|gender|diagnosis_code|diagnosis_description|diagnosis_date|
++----------+---+------+--------------+---------------------+--------------+
+|        P1| 41|     M|          D123|             Diabetes|    2023-08-01|
+|        P2| 42|     F|          C345|               Cancer|    2023-08-01|
+|        P3| 56|     F|          H234|  High Blood Pressure|    2023-08-01|
+|        P4| 54|     M|          C345|               Cancer|    2023-08-01|
+|        P5| 35|     M|          C345|               Cancer|    2023-08-01|
++----------+---+------+--------------+---------------------+--------------+
+only showing top 5 rows
+
+Data saved successfully to MongoDB collection 'healthcare_db.healthcare_raw_data'.
+
+Mandatory columns verification is completed
+
+Mandatory columns casted successfully to respective datatypes
+
+Duplicate records verification is completed
+{'patient_id': 0, 'age': 0, 'gender': 0, 'diagnosis_code': 0, 'diagnosis_description': 0, 'diagnosis_date': 0}
+
+Handling null and missing values process is completed
+cleaning_report : {'missing_columns': [], 'duplicate_records': 0, 'columns_with_null_count': {'patient_id': 0, 'age': 0, 'gender': 0, 'diagnosis_code': 0, 'diagnosis_description': 0, 'diagnosis_date': 0}}
+
+Cleaning_report data saved successfully to MongoDB collection 'healthcare_db.cleaning_report'.
+
+Gender_ratio data saved successfully to MongoDB collection 'healthcare_db.disease_gender_ratio'.
+
+Common_diseases data saved successfully to MongoDB collection 'healthcare_db.most_common_diseases'.
+
+Age_category data saved successfully to MongoDB collection 'healthcare_db.age_category'.
+
+Senior_citizen_flag data saved successfully to MongoDB collection 'healthcare_db.senior_citizen_flag'.
+
+Disease_trend_over_the_week data saved successfully to MongoDB collection 'healthcare_db.disease_trend_over_the_week'.
+```
 
 ## Data Management
 
