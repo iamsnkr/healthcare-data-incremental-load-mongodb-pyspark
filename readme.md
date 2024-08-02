@@ -20,7 +20,8 @@ This Spark application processes healthcare data stored in CSV format on HDFS an
   - **Disease Trend Over Week:**
     - Analyzes the number of cases diagnosed for each disease across different days of the week to identify trends.
   - **Console Output**
-**```bash
+
+```bash
 org.mongodb.spark#mongo-spark-connector_2.12 added as a dependency
 Setting default log level to "WARN".
 
@@ -59,7 +60,7 @@ Age_category data saved successfully to MongoDB collection 'healthcare_db.age_ca
 Senior_citizen_flag data saved successfully to MongoDB collection 'healthcare_db.senior_citizen_flag'.
 
 Disease_trend_over_the_week data saved successfully to MongoDB collection 'healthcare_db.disease_trend_over_the_week'.
-```**
+```
 
 ## Data Management
 
