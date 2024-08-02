@@ -24,6 +24,7 @@ This Spark application processes healthcare data stored in CSV format on HDFS an
 
 - **Data Storage:**
   - Transformed data from each Spark job is pushed to Manogo DB for centralized storage and further analysis.
+  - ![alt text](/data/processed/mongoDB_data.png)
 
 
 ## Project Structure
