@@ -1,6 +1,6 @@
 # Healthcare Data Analysis with Spark
 
-This Spark application processes healthcare data stored in CSV format on HDFS and pushes the transformed data to Manogi DB for further analysis and applications.
+This Spark application processes healthcare data stored in CSV format on HDFS and pushes the transformed data to Manogo DB for further analysis and applications.
 
 ## Features
 
@@ -23,7 +23,7 @@ This Spark application processes healthcare data stored in CSV format on HDFS an
 ## Data Management
 
 - **Data Storage:**
-  - Transformed data from each Spark job is pushed to Manogi DB for centralized storage and further analysis.
+  - Transformed data from each Spark job is pushed to Manogo DB for centralized storage and further analysis.
 
 
 ## Project Structure
